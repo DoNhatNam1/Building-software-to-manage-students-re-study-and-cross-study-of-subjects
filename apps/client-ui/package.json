@@ -24,6 +24,7 @@
     "antd": "^5.13.3",
     "antd-img-crop": "^4.21.0",
     "bcrypt": "^5.1.1",
+    "bootstrap": "^5.3.3",
     "cookies-next": "^4.1.1",
     "firebase": "^10.8.0",
     "framer-motion": "^10.16.5",
