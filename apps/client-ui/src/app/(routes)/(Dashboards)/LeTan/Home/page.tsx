@@ -1,5 +1,5 @@
 
-import { ReceptionistHomeScreen } from "@/screens/ReceptionistHomeScreen";
+import  ReceptionistHomeScreen  from "@/screens/ReceptionistHomeScreen";
 
 export default function Page() {
   return (

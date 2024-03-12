@@ -4,7 +4,7 @@ import AdminAddGoodsButtonsComponent from '@/components/Buttons/AdminAddGoodsBut
 import AdminGoodsTableComponent from '@/components/Tables/AdminGoodsTableComponent'
 import AdminHeader from '@/components/Layout/AdminHeader'
 
-const GoodsBody = () => {
+export default async function GoodsBody() {
   return (
     <div className="basis-5/6">
     <AdminHeader />
@@ -22,5 +22,3 @@ const GoodsBody = () => {
   </div>
   )
 }
-
-export default GoodsBody

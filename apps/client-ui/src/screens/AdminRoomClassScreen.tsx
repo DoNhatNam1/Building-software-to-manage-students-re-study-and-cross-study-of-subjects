@@ -5,7 +5,7 @@ import RoomBody from "@/shared/Admin/RoomBody";
 
 import { cookies } from "next/headers";
 
-const AdminRoomClassScreen = () => {
+export default async function AdminRoomClassScreen () {
     const cookieStore = cookies();
     const Admin_id = cookieStore.get("user_id");
     return (
@@ -18,5 +18,3 @@ const AdminRoomClassScreen = () => {
       </>
     );
 }
-
-export default AdminRoomClassScreen

@@ -1,4 +1,4 @@
-"use server";
+
 import Image from "next/image";
 import Logo from "../../public/screenshot_1704975625.png";
 import Link from "next/link";

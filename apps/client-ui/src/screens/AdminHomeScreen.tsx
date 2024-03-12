@@ -1,11 +1,9 @@
-"use server";
-
+'use server'
 import AdminNavItems from "@/components/AdminNavItems";
 import AdminBodyHome from "@/components/Layout/AdminBodyHome";
-
 import { cookies } from "next/headers";
 
-export const AdminHomeScreen = () => {
+export default async function AdminHomeScreen() {
   const cookieStore = cookies();
   const Admin_id = cookieStore.get("user_id");
   return (

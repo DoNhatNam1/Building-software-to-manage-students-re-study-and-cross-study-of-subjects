@@ -5,7 +5,7 @@ import AdminAddEmployeesButtonsComponent from "@/components/Buttons/AdminEmploye
 import AdminHeader from "@/components/Layout/AdminHeader"
 import AdminEmployeesTableComponent from "@/components/Tables/AdminEmployeesTableComponent"
 
-const AdminEmployeesBody = () => {
+export default async function AdminEmployeesBody() {
     
   return (
     <div className="basis-5/6 bg-gray-200">
@@ -26,4 +26,3 @@ const AdminEmployeesBody = () => {
   )
 }
 
-export default AdminEmployeesBody

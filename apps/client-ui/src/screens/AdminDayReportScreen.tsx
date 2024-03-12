@@ -4,7 +4,7 @@ import AdminNavItems from "@/components/AdminNavItems";
 import DayReportBody from "@/shared/Admin/DayReportBody";
 import { cookies } from "next/headers";
 
-const AdminDayReportScreen = () => {
+export default async function AdminDayReportScreen () {
     const cookieStore = cookies();
     const Admin_id = cookieStore.get("user_id");
   return (
@@ -17,5 +17,3 @@ const AdminDayReportScreen = () => {
     </>
   )
 }
-
-export default AdminDayReportScreen

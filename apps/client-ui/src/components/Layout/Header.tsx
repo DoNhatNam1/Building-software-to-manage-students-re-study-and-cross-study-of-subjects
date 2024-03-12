@@ -4,7 +4,7 @@ import styles from "@/utils/style";
 import NavItems from "../NavItems";
 import ProfileDropDown from "../ProfileDropDown";
 
-const Header = () => {
+export default async function Header() {
   return (
     <header className="w-full bg-[#0A0713]">
       <div className="w-[90%] m-auto h-[80px] flex items-center justify-between">
@@ -16,4 +16,4 @@ const Header = () => {
   );
 };
 
-export default Header;
+

@@ -5,7 +5,7 @@ import AdminHeader from '@/components/Layout/AdminHeader'
 import AdminPriceBookTableComponent from '@/components/Tables/Rooms/AdminPriceBookTableComponent'
 import React from 'react'
 
-const PriceBookBody = () => {
+export default async function PriceBookBody () {
   return (
     <div className="basis-5/6 bg-gray-200">
     <AdminHeader />
@@ -23,5 +23,3 @@ const PriceBookBody = () => {
   </div>
   )
 }
-
-export default PriceBookBody

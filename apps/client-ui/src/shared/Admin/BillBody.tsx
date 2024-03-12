@@ -4,7 +4,7 @@ import AdminAddBillButtonsComponent from '@/components/Buttons/AdminAddBillButto
 import AdminBillTableComponent from '@/components/Tables/AdminBillTableComponent'
 import AdminHeader from '@/components/Layout/AdminHeader'
 
-const BillBody = () => {
+export default async function BillBody() {
   return (
     <div className="basis-5/6 bg-gray-200">
     <AdminHeader />
@@ -22,5 +22,3 @@ const BillBody = () => {
   </div>
   )
 }
-
-export default BillBody

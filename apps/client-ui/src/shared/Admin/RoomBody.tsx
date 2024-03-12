@@ -4,7 +4,7 @@ import AdminAddRoomClassButtonComponent from "@/components/Buttons/Rooms/AdminAd
 import AdminRoomClassTableComponent from "@/components/Tables/Rooms/AdminRoomClassTableComponent";
 import AdminHeader from "@/components/Layout/AdminHeader";
 
-const RoomBody = () => {
+export default async function RoomBody () {
   return (
     <>
       <div className="basis-5/6">
@@ -25,4 +25,3 @@ const RoomBody = () => {
   );
 };
 
-export default RoomBody;

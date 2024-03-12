@@ -1,5 +1,5 @@
 
-import { AdminHomeScreen } from "@/screens/AdminHomeScreen";
+import AdminHomeScreen from "@/screens/AdminHomeScreen";
 
 export default function Page() {
   return (

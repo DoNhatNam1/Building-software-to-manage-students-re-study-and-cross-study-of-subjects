@@ -3,7 +3,7 @@
 import AdminHeader from '@/components/Layout/AdminHeader'
 import PdfView from '@/lib/pdf-lib/DayReport/PdfView';
 
-const DayReportBody = () => {
+export default async function DayReportBody() {
   return (
     <div className="basis-5/6">
     <AdminHeader />
@@ -13,5 +13,3 @@ const DayReportBody = () => {
   </div>
   )
 }
-
-export default DayReportBody
