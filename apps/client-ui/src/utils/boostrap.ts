@@ -11,6 +11,7 @@ export const boots = {
     DivContainer: 'container',
     DivRow: 'row',
     DivCol: 'col',
-    DivCol8: 'col-8'
+    DivCol8: 'col-8',
+    DivCol6: 'col-6'
    };
 
