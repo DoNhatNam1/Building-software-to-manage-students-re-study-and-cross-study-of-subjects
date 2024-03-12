@@ -1,6 +1,6 @@
 'use client'
 
-import {boots, div } from '@/utils/boostrap'
+import {boots, div } from '../../../Boostrap/boostrap'
 const HomeBody = () => {
   return (
     <>
