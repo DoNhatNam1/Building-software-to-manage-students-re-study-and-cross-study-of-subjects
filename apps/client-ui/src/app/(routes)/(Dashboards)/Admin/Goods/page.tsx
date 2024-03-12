@@ -1,5 +1,5 @@
-import AdminGoodsScreen from "@/screens/AdminGoodsScreen";
 
+import AdminGoodsScreen from "@/screens/AdminGoodsScreen";
 
 export default function Page() {
   return (

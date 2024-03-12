@@ -4,7 +4,7 @@ import AdminAddPurchaseOrderButtonsComponent from '@/components/Buttons/AdminAdd
 import AdminPurchaseOrderTableComponent from '@/components/Tables/AdminPurchaseOrderTableComponent'
 import AdminHeader from '@/components/Layout/AdminHeader'
 
-const PurchaseOrderBody = () => {
+export default async function PurchaseOrderBody () {
   return (
     <div className="basis-5/6 bg-gray-200">
     <AdminHeader />
@@ -22,5 +22,3 @@ const PurchaseOrderBody = () => {
   </div>
   )
 }
-
-export default PurchaseOrderBody

@@ -1,9 +1,9 @@
-
+'use server'
 import AdminNavItems from "@/components/AdminNavItems"
 import CashBookBody from "@/shared/Admin/CashBookBody"
 import { cookies } from "next/headers";
 
-const AdminCashBookScreen = () => {
+export default async function AdminCashBookScreen () {
   const cookieStore = cookies();
   const Admin_id = cookieStore.get("user_id");
   return (
@@ -16,5 +16,3 @@ const AdminCashBookScreen = () => {
     </>
   )
 }
-
-export default AdminCashBookScreen

@@ -5,7 +5,7 @@ import BillBody from "@/shared/Admin/BillBody";
 
 import { cookies } from "next/headers";
 
-const AdminBillScreen = () => {
+export default function AdminBillScreen() {
     const cookieStore = cookies();
     const Admin_id = cookieStore.get("user_id");
 
@@ -20,4 +20,3 @@ const AdminBillScreen = () => {
     );
 }
 
-export default AdminBillScreen

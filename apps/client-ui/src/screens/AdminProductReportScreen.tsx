@@ -4,7 +4,7 @@ import AdminNavItems from "@/components/AdminNavItems";
 import ProductReportBody from "@/shared/Admin/ProductReportBody";
 import { cookies } from "next/headers";
 
-const AdminProductReportScreen = () => {
+export default async function AdminProductReportScreen () {
     const cookieStore = cookies();
     const Admin_id = cookieStore.get("user_id");
   return (
@@ -17,5 +17,3 @@ const AdminProductReportScreen = () => {
     </>
   )
 }
-
-export default AdminProductReportScreen

@@ -1,7 +1,6 @@
 "use server";
 
-import AdminNavItems from "@/components/AdminNavItems";
-import GoodsBody from "@/shared/Admin/GoodsBody";
+import HomeBody from "@/shared/SinhVien/HomeBody";
 
 import { cookies } from "next/headers";
 
@@ -11,10 +10,9 @@ export default async function AdminGoodsScreen() {
 
     return (
       <>
-        <div className="w-full h-full bg-slate-200 flex">
+        <div className="w-full h-screen bg-slate-200 light">
           {/* <Dashboard /> */}
-          <AdminNavItems />
-          <GoodsBody />
+          <HomeBody />
         </div>
       </>
     );

@@ -1,8 +1,8 @@
-
+'use server'
 import Header from "../components/Layout/Header";
 import Hero from "../shared/Root/Hero";
 
-const HomeScreen = async () => {
+export default async function HomeScreen() {
   return (
     <div>
       <Header />
@@ -11,4 +11,3 @@ const HomeScreen = async () => {
   );
 };
 
-export default HomeScreen;

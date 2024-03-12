@@ -7,7 +7,7 @@ import { TfiMenuAlt } from "react-icons/tfi";
 import { MdOutlineSearch } from "react-icons/md";
 import { Radio } from 'antd';
 
-const ReceptionistHomeBody = () => {
+export default async function ReceptionistHomeBody () {
   return (
     <>
     {/* Top Body */}
@@ -57,5 +57,3 @@ const ReceptionistHomeBody = () => {
     </>
   )
 }
-
-export default ReceptionistHomeBody

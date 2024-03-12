@@ -1,4 +1,3 @@
-'use server'
 
 import AdminHeaderRightInput from "@/lib/antd/AdminHeaderRightInput"
 

@@ -5,7 +5,7 @@ import PriceBookBody from "@/shared/Admin/PriceBookBody";
 
 import { cookies } from "next/headers";
 
-const AdminPriceBookScreen = () => {
+export default async function AdminPriceBookScreen() {
     const cookieStore = cookies();
     const Admin_id = cookieStore.get("user_id");
     return (
@@ -18,5 +18,3 @@ const AdminPriceBookScreen = () => {
       </>
     );
 }
-
-export default AdminPriceBookScreen

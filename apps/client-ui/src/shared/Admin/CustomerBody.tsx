@@ -1,9 +1,7 @@
 
 
- const CustomerBody = () => {
+export default async function CustomerBody() {
   return (
     <div>CustomerBody</div>
   )
 }
-
-export default CustomerBody

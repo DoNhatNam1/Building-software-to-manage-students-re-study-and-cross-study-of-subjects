@@ -5,7 +5,7 @@ import AdminEmployeesBody from "@/shared/Admin/AdminEmployeesBody";
 
 import { cookies } from "next/headers";
 
-const AdminEmployeesScreen = () => {
+export default async function AdminEmployeesScreen () {
   const cookieStore = cookies();
   const Admin_id = cookieStore.get("user_id");
     return (
@@ -18,5 +18,3 @@ const AdminEmployeesScreen = () => {
       </>
     );
 }
-
-export default AdminEmployeesScreen

@@ -3,7 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Providers } from "./providers/NextUiProvider";
 import { Toaster } from "react-hot-toast";
-import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap/dist/css/bootstrap.min.css";
 
 // const poppins = Poppins({
 //   subsets: ["latin"],

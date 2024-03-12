@@ -4,7 +4,7 @@ import AdminCashBookBodyContentComponents from "@/components/AdminCashBookBodyCo
 import AdminHeader from "@/components/Layout/AdminHeader"
 
 
-const CashBookBody = () => {
+export default async function CashBookBody () {
   return (
     <div className="basis-5/6 bg-gray-200">
     <AdminHeader />
@@ -14,5 +14,3 @@ const CashBookBody = () => {
   </div>
   )
 }
-
-export default CashBookBody
