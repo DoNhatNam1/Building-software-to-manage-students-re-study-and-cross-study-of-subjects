@@ -53,7 +53,7 @@ export default function LichHocTable() {
     >
       <TableHeader>
         <TableColumn key="name">STT</TableColumn>
-        <TableColumn key="height">MÃ môn học</TableColumn>
+        <TableColumn key="height">Mã môn học</TableColumn>
         <TableColumn key="mass">Mã lớp</TableColumn>
         <TableColumn key="birth_year"> Ca học</TableColumn>
         <TableColumn key="birth_year">Ngày học</TableColumn>
