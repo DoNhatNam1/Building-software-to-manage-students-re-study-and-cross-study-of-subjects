@@ -3,6 +3,7 @@ import {boots, div, tables } from '../../../Boostrap/boostrap'
 import imglg from '../../../public/logo.jpg'
 import {ThongTinnav,  ThongTinnav11, ThongTinnav15, ThongTinnav2, ThongTinnav3, ThongTinnav5, ThongTinnav6, ThongTinnav7, ThongTinnav8, ThongTinnav9 } from '@/components/ThongTinnav'
 import table from '../../components/table'
+import HocPhiTable from '@/lib/NextUi/HocPhiTable'
 
 const ThongTinBody = () => {
   return (
@@ -12,7 +13,7 @@ const ThongTinBody = () => {
 
 {/* NavBar Container */}
   <nav className="flex basis-1/6 navbar navbar-expand-lg navbar-dark bg-white flex-col text-center top-0 l-0 flex-nowrap h-screen container">
-      <div className="container-fluid justify-center py-4 ml-24 ">
+      <div className="container-fluid justify-center py-5 ml-28 ">
         <a className="navbar-brand text-center rounded-lg rounded-" href="#">
           <Image
           src={imglg}
@@ -66,8 +67,8 @@ const ThongTinBody = () => {
     </div>
   </div>
   {/* BottomBody */}
-  <div className="basis-9/12 bg-gray-300">
-    
+  <div className="basis-9/12 bg-slate-200">
+  <HocPhiTable/>
   </div>
   <div className='basis-1/12 bg-gray-100'><hr />
     <ThongTinnav11 />

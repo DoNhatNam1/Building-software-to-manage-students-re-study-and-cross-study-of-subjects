@@ -4,7 +4,7 @@ import React from "react";
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Spinner, Button} from "@nextui-org/react";
 import {useAsyncList} from "@react-stately/data";
 
-export default function SinhVienDangKyTable() {
+export default function DiemTable() {
   const [page, setPage] = React.useState(1);
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -52,11 +52,13 @@ export default function SinhVienDangKyTable() {
       }}
     >
       <TableHeader>
-        <TableColumn key="name">STT</TableColumn>
-        <TableColumn key="height">Dịch vụ</TableColumn>
-        <TableColumn key="mass">Đăng ký</TableColumn>
-        <TableColumn key="birth_year"> Mô tả</TableColumn>
-        <TableColumn key="birth_year">Khoa</TableColumn>
+        <TableColumn key="name">Mã HP</TableColumn>
+        <TableColumn key="height">Tên học phần</TableColumn>
+        <TableColumn key="mass">Tín chỉ</TableColumn>
+        <TableColumn key="birth_year"> Điểm QT</TableColumn>
+        <TableColumn key="birth_year">Điểm CK</TableColumn>
+        <TableColumn key="birth_year">Điểm HP</TableColumn>
+        <TableColumn key="birth_year">Điểm hệ 4</TableColumn>
       </TableHeader>
       <TableBody
         isLoading={isLoading}

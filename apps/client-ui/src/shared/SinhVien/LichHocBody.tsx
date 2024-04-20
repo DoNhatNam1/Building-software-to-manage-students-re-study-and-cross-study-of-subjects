@@ -2,7 +2,7 @@ import Image from 'next/image'
 import {boots, div, tables } from '../../../Boostrap/boostrap'
 import imglg from '../../../public/logo.jpg'
 import {ThongTinnav,  ThongTinnav11,   ThongTinnav17, ThongTinnav2, ThongTinnav3, ThongTinnav5, ThongTinnav6, ThongTinnav7, ThongTinnav8, ThongTinnav9 } from '@/components/ThongTinnav'
-import table from '../../components/table'
+import LichHocTable from '@/lib/NextUi/LichHocTable'
 
 const ThongTinBody = () => {
   return (
@@ -53,7 +53,7 @@ const ThongTinBody = () => {
   </nav>
 
 {/* Body Container */}
-<div className="basis-5/6 flex flex-col">
+<div className="basis-5/6 flex flex-col h-auto">
 
   {/* TopBody */}
   <div className="basis-1/12 bg-gray-100">
@@ -68,8 +68,8 @@ const ThongTinBody = () => {
     </div>
   </div>
   {/* BottomBody */}
-  <div className="basis-9/12 bg-gray-300">
-    
+  <div className="basis-9/12 bg-gray-300 px-4 ">
+  <LichHocTable/>
   </div>
   <div className='basis-1/12 bg-gray-100'><hr />
     <ThongTinnav11 />

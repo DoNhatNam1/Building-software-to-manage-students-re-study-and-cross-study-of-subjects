@@ -119,7 +119,7 @@ const ThongTinnav12 = () => {
     <>
     <button className='flex gap-4 mt-4 ml-4'>
     <FaCashRegister className='text-slate-300 size-8'/>
-    <span className='text-black text-3xl'> Đăng ký sinh viên </span>
+    <span className='text-black text-3xl '> Đăng ký sinh viên </span>
     </button>
     </>
   )

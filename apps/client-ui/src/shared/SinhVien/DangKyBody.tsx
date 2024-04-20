@@ -2,6 +2,7 @@ import Image from 'next/image'
 import {boots, div, tables } from '../../../Boostrap/boostrap'
 import imglg from '../../../public/logo.jpg'
 import {ThongTinnav, ThongTinnav10, ThongTinnav11, ThongTinnav12, ThongTinnav2, ThongTinnav3, ThongTinnav5, ThongTinnav6, ThongTinnav7, ThongTinnav8, ThongTinnav9 } from '@/components/ThongTinnav'
+import DangKyHocLaiTable from '@/lib/NextUi/DangKyHocLaiTable'
 
 
 const ThongTinBody = () => {
@@ -60,19 +61,19 @@ const ThongTinBody = () => {
     </div>
   </div>
   
-  <div className='basis-1/12 bg-gray-100'><hr />
-    <div className='ml-2'>
+  <div className='basis-1/12 bg-gray-100 border-b-1 border-b-gray-300'><hr />
+    <div className='ml-2 '>
       <ThongTinnav12 />
     </div>
   </div>
   {/* BottomBody */}
-  <div className="basis-9/12 bg-gray-300 px-4 ">
-  
+  <div className="basis-9/12 bg-gray-100 px-4 ">
+  <DangKyHocLaiTable/>
   </div>
   <div className='basis-1/12 bg-gray-100'><hr />
     <ThongTinnav11 />
   </div>
-</div>
+</div >
 
 </div>
 

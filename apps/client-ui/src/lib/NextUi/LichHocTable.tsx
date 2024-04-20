@@ -4,7 +4,7 @@ import React from "react";
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, getKeyValue, Spinner, Button} from "@nextui-org/react";
 import {useAsyncList} from "@react-stately/data";
 
-export default function SinhVienDangKyTable() {
+export default function LichHocTable() {
   const [page, setPage] = React.useState(1);
   const [isLoading, setIsLoading] = React.useState(true);
 
@@ -53,10 +53,11 @@ export default function SinhVienDangKyTable() {
     >
       <TableHeader>
         <TableColumn key="name">STT</TableColumn>
-        <TableColumn key="height">Dịch vụ</TableColumn>
-        <TableColumn key="mass">Đăng ký</TableColumn>
-        <TableColumn key="birth_year"> Mô tả</TableColumn>
-        <TableColumn key="birth_year">Khoa</TableColumn>
+        <TableColumn key="height">MÃ môn học</TableColumn>
+        <TableColumn key="mass">Mã lớp</TableColumn>
+        <TableColumn key="birth_year"> Ca học</TableColumn>
+        <TableColumn key="birth_year">Ngày học</TableColumn>
+        <TableColumn key="birth_year">Phòng học</TableColumn>
       </TableHeader>
       <TableBody
         isLoading={isLoading}

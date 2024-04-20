@@ -1,14 +1,15 @@
 import Image from 'next/image'
 import {boots, div, tables } from '../../../Boostrap/boostrap'
 import imglg from '../../../public/logo.jpg'
-import {ThongTinnav, ThongTinnav1, ThongTinnav11, ThongTinnav12, ThongTinnav14, ThongTinnav2, ThongTinnav3, ThongTinnav4, ThongTinnav5, ThongTinnav6, ThongTinnav7, ThongTinnav8, ThongTinnav9 } from '@/components/ThongTinnav'
+import {ThongTinnav,  ThongTinnav11, ThongTinnav12, ThongTinnav14, ThongTinnav2, ThongTinnav3, ThongTinnav5, ThongTinnav6, ThongTinnav7, ThongTinnav8, ThongTinnav9 } from '@/components/ThongTinnav'
 import table from '../../components/table'
+import DiemTable from '@/lib/NextUi/DiemTable'
 
 const ThongTinBody = () => {
   return (
 <>
 {/* Page */}
-<div className="flex w-screen h-screen">
+<div className="flex w-screen h-screen mr- ">
 
 {/* NavBar Container */}
   <nav className="flex basis-1/6 navbar navbar-expand-lg navbar-dark bg-white flex-col text-center top-0 l-0 flex-nowrap h-screen container">
@@ -68,8 +69,8 @@ const ThongTinBody = () => {
     </div>
   </div>
   {/* BottomBody */}
-  <div className="basis-9/12 bg-gray-300">
-    
+  <div className="basis-9/12 bg-gray-300 px-4">
+  <DiemTable/>
   </div>
   <div className='basis-1/12 bg-gray-100'><hr />
     <ThongTinnav11 />

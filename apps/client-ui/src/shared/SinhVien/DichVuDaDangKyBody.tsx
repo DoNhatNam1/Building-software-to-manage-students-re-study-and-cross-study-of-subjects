@@ -9,10 +9,10 @@ const ThongTinBody = () => {
   return (
 <>
 {/* Page */}
-<div className="flex w-screen h-screen">
+<div className="flex w-screen h-screen ">
 
 {/* NavBar Container */}
-  <nav className="flex basis-1/6 navbar navbar-expand-lg navbar-dark bg-white flex-col text-center top-0 l-0 flex-nowrap h-screen container">
+  <nav className="flex basis-1/6 navbar  navbar-expand-lg navbar-dark bg-white flex-col text-center top-0 l-0 flex-nowrap h-screen container">
       <div className="container-fluid justify-center py-4 ml-24 ">
         <a className="navbar-brand text-center rounded-lg rounded-" href="#">
           <Image
@@ -54,7 +54,7 @@ const ThongTinBody = () => {
   </nav>
 
 {/* Body Container */}
-<div className="basis-5/6 flex flex-col">
+<div className="basis-5/6 flex flex-col ">
 
   {/* TopBody */}
   <div className="basis-1/12 bg-gray-100">

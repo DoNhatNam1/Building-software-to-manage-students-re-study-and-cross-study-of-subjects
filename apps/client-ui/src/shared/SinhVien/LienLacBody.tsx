@@ -2,7 +2,8 @@ import Image from 'next/image'
 import {boots, div, tables } from '../../../Boostrap/boostrap'
 import imglg from '../../../public/logo.jpg'
 import {ThongTinnav, ThongTinnav10, ThongTinnav11, ThongTinnav12, ThongTinnav18, ThongTinnav2, ThongTinnav3,  ThongTinnav5, ThongTinnav6, ThongTinnav7, ThongTinnav8, ThongTinnav9 } from '@/components/ThongTinnav'
-import table from '../../components/table'
+import Lienlac from '@/lib/NextUi/Lienlac'
+
 
 const ThongTinBody = () => {
   return (
@@ -67,7 +68,7 @@ const ThongTinBody = () => {
   </div>
   {/* BottomBody */}
   <div className="basis-9/12 bg-gray-300">
-    
+    <Lienlac/>
   </div>
   <div className='basis-1/12 bg-gray-100'><hr />
     <ThongTinnav11 />
