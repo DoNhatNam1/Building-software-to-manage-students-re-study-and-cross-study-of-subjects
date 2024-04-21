@@ -32,20 +32,27 @@ model SubUser {
   subAvatar     SubAvatars?
   createdAt     DateTime             @default(now())
   updatedAt     DateTime             @updatedAt
-  role          tbtaikhoancon_VaiTro
-  DangKyHocPhan TbDangKyHocPhan[]
+  role          tbtaikhoancon_VaiTro @default(SinhVien)
+  DangKyHocPhan TbDangKyHocPhan[] 
+  Diem TbDiem[]
 
   @@unique([email, phone_number], name: "uniquee_sub_email_phone_number")
 }
 
 model TbDiem {
   id         String   @id @default(uuid())
-  MaMonHoc   String
+  MaHocPhan   String
   MaSinhVien String
   MaHoaDon   String?
   DiemGiuaKi Int      @db.Int
   DiemCuoiKi Int      @db.Int
   NgayThi    DateTime
+  HocPhan TbHocPhan   @relation(fields: [MaHocPhan], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tbdiem_mahocphan_foreign_key_idx")
+  SinhVien   SubUser   @relation(fields: [MaSinhVien], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tbdiem_masinhvien_foreign_key_idx")
+    
+    @@index([MaHocPhan], map: "MaHocPhan")
+    @@index([MaSinhVien], map: "MaSinhVien")
+
 }
 
 model TblichHoc {
@@ -54,12 +61,18 @@ model TblichHoc {
   MaPhongHoc         String
   ThoiGianHoc        DateTime
   StatusDeXemLichHoc tbSubUser_statusdexemlichhoc
+  HocPhan TbHocPhan   @relation(fields: [MaHocPhan], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tblichhoc_mahocphan_foreign_key_idx")
+  PhongHoc TbPhongHoc @relation(fields: [MaPhongHoc], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tblichhoc_maphonghoc_foreign_key_idx")
+
+    @@index([MaHocPhan], map: "MaHocPhan")
+    @@index([MaPhongHoc], map: "MaPhongHoc")
 }
 
 model TbPhongHoc {
   id          String            @id @default(uuid())
   TenPhongHoc String            @db.VarChar(255)
   Status      tbphonghoc_status @default(On)
+  LichHoc TblichHoc[]
 }
 
 model TbThoiGianDeDuyTriTrangDangKy {
@@ -104,6 +117,8 @@ model TbHocPhan {
   GiaCa         Decimal           @db.Decimal(20, 2)
   GiangVien     TbGiangVien       @relation(fields: [MaGiangVien], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tbhocphan_magiangvien_foreign_key_idx")
   DangKyHocPhan TbDangKyHocPhan[]
+  LichHoc TblichHoc[]
+  Diem TbDiem[]
 
   @@index([MaGiangVien], map: "MaGiangVien")
 }

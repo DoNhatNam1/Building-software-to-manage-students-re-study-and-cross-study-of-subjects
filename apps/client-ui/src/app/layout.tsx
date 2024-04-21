@@ -13,8 +13,8 @@ import { Toaster } from "react-hot-toast";
 const inter = Inter({ subsets: ["latin"], variable: "--font-inter" });
 
 export const metadata: Metadata = {
-  title: "Welding Store",
-  description: "Welding Store website",
+  title: "Welding School",
+  description: "Welding School website",
 };
 
 export default function RootLayout({
