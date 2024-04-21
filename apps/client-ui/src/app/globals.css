@@ -119,4 +119,10 @@ box-shadow: none;
 -webkit-box-shadow: none;
 }
 
+.bg-content1{
+  height: 100% !important;
+  margin-top: 20px;
+  margin-bottom: 20px ;
+}
+
 

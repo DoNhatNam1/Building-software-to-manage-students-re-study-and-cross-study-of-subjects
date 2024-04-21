@@ -1,11 +1,10 @@
 "use server";
 
-import SinhVienNav from "@/components/SinhVienNav";
-import HomeBody from "@/shared/SinhVien/HomeBody";
+import DangKyBody from "@/shared/SinhVien/DangKyBody";
 
 import { cookies } from "next/headers";
 
-export default async function AdminGoodsScreen() {
+export default async function SinhVienDangKyScreen() {
     const cookieStore = cookies();
     const Admin_id = cookieStore.get("user_id");
 
@@ -14,8 +13,7 @@ export default async function AdminGoodsScreen() {
         <div className="w-full h-screen bg-slate-200 light">
           {/* <Dashboard /> */}
           
-          <SinhVienNav/>
-          <HomeBody />
+          <DangKyBody />
         </div>
       </>
     );
