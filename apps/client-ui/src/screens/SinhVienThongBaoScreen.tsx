@@ -1,7 +1,7 @@
 "use server";
 
 import SinhVienNav from "@/components/SinhVienNav";
-import HomeBody from "@/shared/SinhVien/HomeBody";
+import ThongBaoBody from "@/shared/SinhVien/ThongBaoBody";
 
 import { cookies } from "next/headers";
 
@@ -15,7 +15,7 @@ export default async function AdminGoodsScreen() {
           {/* <Dashboard /> */}
           
           <SinhVienNav/>
-          <HomeBody />
+          <ThongBaoBody />
         </div>
       </>
     );
