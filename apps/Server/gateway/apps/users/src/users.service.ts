@@ -155,16 +155,6 @@ export class UsersService {
         email,
         password,
         phone_number,
-        ChiNhanh: {
-          create: {
-            TenChiNhanh: 'Chi Nhánh Trung Tâm',
-            KhachSan: {
-              create: {
-                TenKhachSan: 'Khách sạn Trung Tâm',
-              },
-            },
-          },
-        },
       },
     });
 

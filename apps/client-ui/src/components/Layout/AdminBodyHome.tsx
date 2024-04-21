@@ -10,7 +10,7 @@ const AdminBodyHome = () => {
           <div className="bg-white rounded-lg border-gray-400 border-medium border-solid min-h-32 px-2 col-span-3">
             <div className="w-full py-2 border-b-medium">
               <h1 className="font-semibold text-gray-800">
-                CÔNG SUẤT SỬ DỤNG PHÒNG HIỆN TẠI
+                Tổng số lượng sinh viên
               </h1>
             </div>
           </div>
@@ -18,7 +18,7 @@ const AdminBodyHome = () => {
           <div className="bg-white rounded-lg border-gray-400 border-medium border-solid px-2 row-span-7">
             <div className="w-full py-2 border-b-medium">
               <h1 className="font-semibold text-gray-800">
-                CÁC HOẠT ĐỘNG GẦN ĐÂY
+                Hoạt động thông báo
               </h1>
             </div>
           </div>
@@ -26,7 +26,7 @@ const AdminBodyHome = () => {
           <div className="bg-white rounded-lg border-gray-400 border-medium border-solid px-2 col-span-3 row-span-3">
             <div className="w-full py-2 border-b-medium">
               <h1 className="font-semibold text-gray-800">
-                SỐ LƯỢNG ĐẶT PHÒNG MỚI CHI NHÁNH TRUNG TÂM
+                Tổng số bài kiểm tra
               </h1>
             </div>
           </div>
@@ -34,7 +34,7 @@ const AdminBodyHome = () => {
           <div className="bg-white rounded-lg border-gray-400 border-medium border-solid px-2 col-span-3 row-span-3">
             <div className="w-full py-2 border-b-medium">
               <h1 className="font-semibold text-gray-800">
-                DOANH THU THÁNG NÀY
+                Hóa đơn
               </h1>
             </div>
           </div>
