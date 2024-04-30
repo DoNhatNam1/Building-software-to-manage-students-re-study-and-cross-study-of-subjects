@@ -11,7 +11,7 @@ const AdminSinhVienBody = () => {
     <div className='text-gray-700 w-full m-5 flex gap-2'>
     <PiStudentBold className='size-10' />
 
-    <span className='text-xl translate-y-1 font-semibold'>Sinh viên của tôi</span>
+    <span className='text-xl translate-y-1 font-semibold'>Danh sách sinh viên</span>
     </div>
 
       {/* Table Container */}

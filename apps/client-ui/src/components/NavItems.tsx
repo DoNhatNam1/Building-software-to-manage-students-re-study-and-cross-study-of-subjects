@@ -18,7 +18,7 @@ const navItems = [
     url: "/news",
   },
   {
-    title: "Về WeldingStore",
+    title: "Về DTM",
     url: "/about",
   },
 ];

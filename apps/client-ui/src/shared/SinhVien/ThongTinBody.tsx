@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import {boots, div, tables } from '../../../Boostrap/boostrap'
 import imglg from '../../../public/logo.jpg'
-import {ThongTinnav, ThongTinnav1, ThongTinnav10, ThongTinnav11, ThongTinnav2, ThongTinnav3, ThongTinnav4, ThongTinnav5, ThongTinnav6, ThongTinnav7, ThongTinnav8, ThongTinnav9 } from '@/components/ThongTinnav'
+import {ThongTinnav, ThongTinnav10, ThongTinnav11, ThongTinnav2, ThongTinnav3, ThongTinnav5, ThongTinnav6, ThongTinnav7, ThongTinnav8, ThongTinnav9 } from '@/components/ThongTinnav'
 import table from '../../components/table'
 
 const ThongTinBody = () => {
@@ -13,7 +13,7 @@ const ThongTinBody = () => {
 {/* NavBar Container */}
   <nav className="flex basis-1/6 navbar navbar-expand-lg navbar-dark bg-white flex-col text-center top-0 l-0 flex-nowrap h-screen container">
       <div className="container-fluid justify-center py-4 ml-24 ">
-        <a className="navbar-brand text-center rounded-lg rounded-" href="#">
+        <a className="navbar-brand text-center rounded-lg" href="#">
           <Image
           src={imglg}
           alt="Avatar Logo"  

@@ -3,6 +3,7 @@ import Image from 'next/image'
 import {boots, div, tables } from '../../../Boostrap/boostrap'
 import imglg from '../../../public/logo.jpg'
 import imgbr from '../../../public/hia.jpg'
+import Link from 'next/link'
 import SinhVienBotonNav from '@/components/SinhVienBotonNav'
 
 
@@ -27,7 +28,10 @@ const HomeBody = () => {
   </div>
   <div className="flex justify-content-center w-full .fs-1  "> 
     <div className="d-flex justify-content-center w-100 gap-5">
-      <button type="button" className={`${boots.buttonSinhVien} text-zinc-600 bg-gray-600` }>Sinh Viên</button>
+      <button type="button"
+      className={`${boots.buttonSinhVien} text-zinc-600 bg-gray-600` }>
+        <Link href="/SinhVien/ThongTin">Sinh viên</Link>
+      </button>
       <button type="button" className={`${boots.buttonSinhVien} text-zinc-600 bg-gray-600` }>Học Phần</button>
       <button type="button" className={`${boots.buttonSinhVien} text-zinc-600 bg-gray-600` }>Đăng Ký Học Lại</button>
       <button type="button" className={`${boots.buttonSinhVien} text-zinc-600 bg-gray-600` }>Thông Báo</button>

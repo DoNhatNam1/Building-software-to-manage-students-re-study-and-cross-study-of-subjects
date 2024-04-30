@@ -2,6 +2,6 @@
 
 import { z } from "zod";
 
-export const formSchemaCreateTeacher = z.object({
+export const formSchemaForgotPassword = z.object({
   email: z.string().email(),
 });

@@ -16,7 +16,7 @@ const Hero = () => {
       <div className="backdrop_shaders w-full" />
       <div className="w-[80%] m-auto">
         <h1 className="text-4xl text-[#1398f8f1] py-5 xl:text-6xl font-[800] xl:leading-[80px] sm:mt-20 font-Inter">
-          Chào mừng đến với WeldingSchool<br />
+          Chào mừng đến với DTM<br />
           <span className="text-slate-200 font-Poppins font-[600] text-3xl">
             Chúng tôi sẽ giúp bạn tìm hiểu về ngôi trường của chúng tôi
           </span>

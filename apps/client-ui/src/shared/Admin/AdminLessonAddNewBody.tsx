@@ -4,17 +4,17 @@ import React from 'react'
 import { useRouter } from 'next/navigation'
 import styles from '@/utils/style'
 import { FaArrowLeftLong } from "react-icons/fa6";
-import { formSchemaCreateTeacher } from '@/lib/zod/formSchemaCreateTeacher'
+import { formSchemaCreateLesson } from '@/lib/zod/formSchemaCreateLesson'
 import { zodResolver } from '@hookform/resolvers/zod'
 import { z } from 'zod'
 import { useForm } from 'react-hook-form'
 import { Spinner } from "@nextui-org/react";
 import toast from 'react-hot-toast'
-import CreateTeacher from '@/actions/POST/create-teacher';
+import CreateLesson from '@/actions/POST/create-lesson';
 
-type CreateTeacherTypeSchema = z.infer<typeof formSchemaCreateTeacher>
+type CreateLessonTypeSchema = z.infer<typeof formSchemaCreateLesson>
 
-const AdminTeacherAddNewBody = () => {
+const AdminLessonAddNewBody = () => {
     const router = useRouter()
 
     const {
@@ -22,18 +22,18 @@ const AdminTeacherAddNewBody = () => {
         handleSubmit,
         formState: { errors, isSubmitting },
         reset,
-      } = useForm<CreateTeacherTypeSchema>({
-        resolver: zodResolver(formSchemaCreateTeacher),
+      } = useForm<CreateLessonTypeSchema>({
+        resolver: zodResolver(formSchemaCreateLesson),
       })
 
     //   Submit
-      const onSubmit = async (data: CreateTeacherTypeSchema) => {
+      const onSubmit = async (data: CreateLessonTypeSchema) => {
     
         try {
-            await CreateTeacher(data)
-            router.push('/Admin/TeacherAttendance')
+            await CreateLesson(data)
+            router.push('/Admin/Lessons')
             reset()
-            toast.success('Thêm mới giảng viên thành công!')
+            toast.success('Thêm mới học phần thành công!')
             window.location.reload()
         } catch (error:any) {
           toast.error(error.message)
@@ -49,7 +49,7 @@ const AdminTeacherAddNewBody = () => {
 
             {/* Btn Group */}
             <button className='px-6 py-3 translate-y-10'
-            onClick={() => router.push('/Admin/TeacherAttendance')}
+            onClick={() => router.push('/Admin/Lessons')}
             >
                 <div className='flex gap-3'>
                     <FaArrowLeftLong className='size-5 text-gray-700 translate-y-1' />
@@ -67,7 +67,7 @@ const AdminTeacherAddNewBody = () => {
                 {/* Title */}
                 <div className='w-full flex justify-center'>
                     <h2 className='font-semibold text-gray-800 text-large'>
-                        Thêm mới giáo viên
+                        Thêm mới học phần
                     </h2>
                 </div>
 
@@ -79,11 +79,11 @@ const AdminTeacherAddNewBody = () => {
                   <label 
                   htmlFor="id"
                   className={`${styles.formlabel}`}
-                  >Mã Giảng viên</label>
+                  >Mã Học phần</label>
                   <div className='flex-grow'>
                     <input type="text"
                    {...register('id')}
-                   placeholder='Mã giảng viên tự động'
+                   placeholder='Mã học phần tự động'
                    className={`${styles.formInput} w-full`}
                    />
                    </div>
@@ -92,56 +92,58 @@ const AdminTeacherAddNewBody = () => {
                   {/* Group Item */}
                   <div className='w-full flex gap-2'>
                   <label 
-                  htmlFor="TenGiangVien"
+                  htmlFor="TenHocPhan"
                   className={`${styles.formlabel}`}
-                  >Tên giáo viên *</label>
+                  >Tên học phần *</label>
                   <div className='flex-grow'>
                     <input type="text"
-                   {...register('TenGiangVien')}
+                   {...register('TenHocPhan')}
                    className={`${styles.formInput} w-full`}
                    />
-                  {errors.TenGiangVien && (
+                  {errors.TenHocPhan && (
                     <span className="text-red-500 block mt-1">
-                      {`${errors.TenGiangVien.message}`}
+                      {`${errors.TenHocPhan.message}`}
                     </span>
                   )}
                    </div>
                   </div>
 
-                    {/* Group Item */}
-                <div className='w-full flex gap-2'>
-                <label 
-                htmlFor="email"
-                className={`${styles.formlabel} pr-14`}
-                >email</label>
-                   <div className='flex-grow'>
-                    <input type="text"    
-                     {...register('email')}           
-                     className={`${styles.formInput} w-full`}
-                     />
-                    {errors.email && (
+
+                  {/* Group Item */}
+                  <div className='w-full flex gap-2'>
+                  <label 
+                  htmlFor="SoTinChi"
+                  className={`${styles.formlabel} pr-16`}
+                  >Số tín chỉ *</label>
+
+                  <div className='flex-grow'>
+                    <input type="number"
+                   {...register('SoTinChi', { valueAsNumber: true })}
+                    className={`${styles.formInput} w-full`}
+                    />
+                    {errors.SoTinChi && (
                       <span className="text-red-500 block mt-1">
-                      {`${errors.email.message}`}
+                      {`${errors.SoTinChi.message}`}
                     </span>
                   )}
                   </div>
                 </div>
 
-                  {/* Group Item */}
-                  <div className='w-full flex gap-2'>
+                {/* Group Item */}
+            <div className='w-full flex gap-2'>
                   <label 
-                  htmlFor="phone_number"
+                  htmlFor="GiaCa"
                   className={`${styles.formlabel} pr-16`}
-                  >SDT *</label>
+                  >Giá tiền *</label>
 
                   <div className='flex-grow'>
                     <input type="number"
-                   {...register('phone_number', { valueAsNumber: true })}
+                   {...register('GiaCa', { valueAsNumber: true })}
                     className={`${styles.formInput} w-full`}
                     />
-                    {errors.phone_number && (
+                    {errors.GiaCa && (
                       <span className="text-red-500 block mt-1">
-                      {`${errors.phone_number.message}`}
+                      {`${errors.GiaCa.message}`}
                     </span>
                   )}
                   </div>
@@ -177,4 +179,4 @@ const AdminTeacherAddNewBody = () => {
   )
 }
 
-export default AdminTeacherAddNewBody
+export default AdminLessonAddNewBody

@@ -1,19 +1,19 @@
 'use server'
-import getAllTeacher from "@/actions/GET/get-all-teacher";
+import getAllLesson from "@/actions/GET/get-all-lesson";
 import AdminNavItems from "@/components/AdminNavItems";
-import AdminTeacherBody from "@/shared/Admin/AdminTeacherBody";
+import AdminLessonBody from "@/shared/Admin/AdminLessonBody";
 import { cookies } from "next/headers";
 
-export default async function AdminTeacherScreen() {
+export default async function () {
   const cookieStore = cookies();
   const Admin_id = cookieStore.get("user_id");
-  const dataTeacher = await getAllTeacher()
+  const dataLessons = await getAllLesson()
   return (
     <>
       <div className="w-full h-screen bg-slate-200 flex">
         {/* <Dashboard /> */}
         <AdminNavItems />
-        <AdminTeacherBody dataTeacher={dataTeacher} />
+        <AdminLessonBody dataLessons={dataLessons} />
       </div>
     </>
   );

@@ -2,14 +2,14 @@
 import React from "react";
 import {Table, TableHeader, TableColumn, TableBody, TableRow, TableCell, Button} from "@nextui-org/react";
 
-type TeacherType = any;
+type LessonType = any;
 
-export default function AdminTeacherTable({
-  dataTeacher,
+export default function AdminLessonTable({
+    dataLessons,
   setDeleteNotification,
   setSelectedItem
 } : {
-  dataTeacher: TeacherType[],
+    dataLessons: LessonType[],
   setDeleteNotification: (e: string) => void
   setSelectedItem: (e: string) => void
 }) {
@@ -25,22 +25,22 @@ export default function AdminTeacherTable({
   return (
     <Table 
     isStriped aria-label="Example static collection table"
-    className='light text-gray-700'
+    className='light text-gray-700 max-h-96 overflow-x-auto overflow-y-auto'
     >
-      <TableHeader>
-        <TableColumn>STT</TableColumn>
-        <TableColumn>Tên</TableColumn>
-        <TableColumn>Email liên lạc</TableColumn>
-        <TableColumn>SĐT</TableColumn>
+      <TableHeader className="sticky top-0 z-10">
+        <TableColumn>Mã học phần</TableColumn>
+        <TableColumn>Tên học phần</TableColumn>
+        <TableColumn>Số tín chỉ</TableColumn>
+        <TableColumn>Giá cả</TableColumn>
         <TableColumn> </TableColumn>
       </TableHeader>
       <TableBody>
-                {dataTeacher.map((item, index) => (
+                {dataLessons.map((item, index) => (
                     <TableRow key={index}>
-                        <TableCell>{index}</TableCell>
-                        <TableCell>{item.TenGiangVien}</TableCell>
-                        <TableCell>{item.email}</TableCell>
-                        <TableCell>{item.phone_number}</TableCell>
+                        <TableCell>{item.id}</TableCell>
+                        <TableCell>{item.TenHocPhan}</TableCell>
+                        <TableCell>{item.SoTinChi}</TableCell>
+                        <TableCell>{item.GiaCa}</TableCell>
                         <TableCell>
                           <div className="flex justify-center gap-2">
                           <Button color="primary">

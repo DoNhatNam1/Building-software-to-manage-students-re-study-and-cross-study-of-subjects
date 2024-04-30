@@ -82,7 +82,7 @@ const Login = ({
 
   return (
     <div>
-      <h1 className={`${styles.title}`}>Login with Welding Store</h1>
+      <h1 className={`${styles.title}`}>Login with DTM</h1>
       <form onSubmit={handleSubmit(onSubmit)}>
         <label className={`${styles.label}`}>Enter your Email</label>
         <input
