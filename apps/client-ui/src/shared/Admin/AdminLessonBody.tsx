@@ -33,7 +33,7 @@ const AdminLessonBody = ({
 
   return (
     <>
-       <div className='space-y-10 z-10 w-full light px-10'>
+       <div className='space-y-10 z-10 w-full light px-10 overflow-y-auto'>
     {/* Title Group */}
     <div className='text-gray-700 w-full m-5 flex gap-2'>
     <GiBookmarklet className='size-10' />

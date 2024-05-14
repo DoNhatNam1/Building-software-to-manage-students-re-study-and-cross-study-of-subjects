@@ -17,6 +17,7 @@ import { getByNameHocPhan } from '@/actions/GET/get-by-name-hoc-phan'
 import { format } from 'date-fns';
 import { useRouter } from 'next/navigation'
 import createDiemSinhVien from '@/actions/POST/create-diem-sinh-vien'
+import { filterOption, isUpperCase } from '@/utils/scripts/utils'
 
 type TypeSchema = z.infer<typeof formAddDiemSchema>
 type getMonHocSchemaType = {
@@ -81,12 +82,6 @@ return () => {
         }
       }
 
-      const isUpperCase = (str: string) => {
-        if (str && str.length > 0) {
-          return str.charAt(0) === str.charAt(0).toUpperCase()
-        }
-        return false // or handle the undefined case as per your requirement
-      }
     
       const dataMonHocWithLabelAndValue = monHoc.map((item: getMonHocSchemaType) => ({
         value: item.TenHocPhan,
@@ -94,12 +89,6 @@ return () => {
           ? item.TenHocPhan.toLowerCase()
           : item.TenHocPhan,
       }))
-
-        // Filter Select
-  const filterOptionMonHoc = (
-    input: string,
-    option?: { label: string; value: string },
-  ) => (option?.label ?? '').toLowerCase().includes(input.toLowerCase())
 
   //  OnChangeGroup
   const onChangeSelectMonHoc = async (value: string) => {
@@ -112,7 +101,7 @@ return () => {
 
   return (
     <>
-    <div className='w-full h-full flex flex-col gap-5 p-5'>
+    <div className='w-full h-full flex flex-col gap-5 p-5 overflow-y-auto'>
 
         {/* Top Body */}
         <div>
@@ -160,7 +149,7 @@ return () => {
                   optionFilterProp="children"
                   onChange={onChangeSelectMonHoc}
                   // onSearch={onSearchSelect}
-                  filterOption={filterOptionMonHoc}
+                  filterOption={filterOption}
                   options={dataMonHocWithLabelAndValue.map((option) => ({
                     label: option.label,
                     value: option.value,

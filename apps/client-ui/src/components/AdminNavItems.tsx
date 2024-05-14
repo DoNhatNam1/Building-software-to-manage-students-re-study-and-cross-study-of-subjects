@@ -6,9 +6,9 @@ import AdminDropDownItemComponent from "./AdminDropDownItemComponent";
 
 const AdminNavItems = () => {
   return (
-    <nav className="basis-1/6 bg-blue-300">
-      <div className="flex flex-col">
-        <div className="fixed pt-5 pl-20 z-20 bg-blue-300">
+    <nav className="h-full basis-1/6 bg-blue-300">
+      <div className="h-full flex flex-col">
+        <div className="fixed pt-5 pl-20 z-20">
           <Link href="/">
             <Image 
               src={Logo} 
@@ -34,7 +34,7 @@ const AdminNavItems = () => {
           </div>
 
           {/* NavItemList */}
-          <div className="mt-32 w-full p-5">       
+          <div className="mt-32 w-full h-full p-5">       
             <AdminDropDownItemComponent/>
           </div>
         </div>

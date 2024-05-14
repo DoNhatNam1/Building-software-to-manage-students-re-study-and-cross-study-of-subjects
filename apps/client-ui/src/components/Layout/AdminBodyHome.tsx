@@ -4,7 +4,7 @@ import AdminHeader from "./AdminHeader";
 const AdminBodyHome = () => {
   return (
     <>
-      <div className="basis-5/6">
+      <div className="basis-5/6 overflow-y-auto">
         <AdminHeader />
         <div className="grid grid-cols-4 grid-rows-7 gap-x-2 gap-y-3 mx-10 my-32 z-0">
           <div className="bg-white rounded-lg border-gray-400 border-medium border-solid min-h-32 px-2 col-span-3">

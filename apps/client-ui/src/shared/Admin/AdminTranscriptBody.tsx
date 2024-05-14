@@ -23,7 +23,7 @@ const AdminTranscriptBody = () => {
     const {
         register,
         handleSubmit,
-        formState: { errors, isSubmitting },
+        formState: { isSubmitting },
         reset,
       } = useForm<SearchDiemTypeSchema>({
         resolver: zodResolver(formSchemaSearchDiem),
@@ -53,7 +53,7 @@ const AdminTranscriptBody = () => {
       
   return (
     <>
-    <div className='w-full h-full flex flex-col p-8 gap-20'>
+    <div className='w-full h-full flex flex-col p-8 gap-20 overflow-y-auto'>
 
     {/* TopContainerBody */}
     <div className='basis-2/12 w-full h-full'>

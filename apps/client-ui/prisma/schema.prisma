@@ -47,6 +47,7 @@ model TbDiem {
   DiemGiuaKi Int      @db.Int
   DiemCuoiKi Int      @db.Int
   NgayThi    DateTime
+  updatedAt  DateTime             @updatedAt
   HocPhan TbHocPhan   @relation(fields: [MaHocPhan], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tbdiem_mahocphan_foreign_key_idx")
   SinhVien   SubUser   @relation(fields: [MaSinhVien], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tbdiem_masinhvien_foreign_key_idx")
     
@@ -61,7 +62,7 @@ model TbLichHoc {
   MaHocPhan          String
   MaPhongHoc         String
   ThoiGianHoc        DateTime
-  StatusDeXemLichHoc tbSubUser_statusdexemlichhoc
+  StatusDeXemLichHoc tbSubUser_statusdexemlichhoc @default(Active)
   HocPhan TbHocPhan   @relation(fields: [MaHocPhan], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tblichhoc_mahocphan_foreign_key_idx")
   PhongHoc TbPhongHoc @relation(fields: [MaPhongHoc], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tblichhoc_maphonghoc_foreign_key_idx")
   GiangVien TbGiangVien @relation(fields: [MaGiangVien], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tblichhoc_magiangvien_foreign_key_idx")
@@ -93,8 +94,13 @@ model TbDangKyHocPhan {
   DiemGiuaKi Int?                       @db.Int
   DiemCuoiKi Int?                       @db.Int
   NgayThi    DateTime?
+  SoTienPhaiTra       Decimal?                       @db.Decimal(20, 2)
+  SoTienDaTra         Decimal?                       @db.Decimal(20, 2)
+  NgayBatDauThanhToan DateTime                      @default(now()) @db.Timestamp(0)
+  PhuongThucThanhToan tbhoadon_PhuongThucThanhToan?
+  GhiChu              String?                       @db.Text
+  NgayThanhToanGanDay DateTime                      @updatedAt
   KieuDangKy tbdangkyhocphan_kieudangky
-  HoaDon     TbHoaDon[]
   SinhVien   SubUser                    @relation(fields: [MaSinhVien], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tbdangkyhocphan_masinhvien_foreign_key_idx")
   HocPhan    TbHocPhan                  @relation(fields: [MaHocPhan], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tbdangkyhocphan_mahocphan_foreign_key_idx")
 
@@ -123,19 +129,6 @@ model TbHocPhan {
 
 }
 
-model TbHoaDon {
-  id                  String                        @id @default(uuid())
-  MaDangKyHocPhan     String
-  SoTienPhaiTra       Decimal                       @db.Decimal(20, 2)
-  SoTienDaTra         Decimal                       @db.Decimal(20, 2)
-  NgayBatDauThanhToan DateTime                      @default(now()) @db.Timestamp(0)
-  PhuongThucThanhToan tbhoadon_PhuongThucThanhToan?
-  GhiChu              String?                       @db.Text
-  NgayThanhToanGanDay DateTime                      @updatedAt
-  DangKyHocPhan       TbDangKyHocPhan               @relation(fields: [MaDangKyHocPhan], references: [id], onDelete: NoAction, onUpdate: NoAction, map: "tbhoadon_madangkyhocphan_foreign_key_idx")
-
-  @@index([MaDangKyHocPhan], map: "MaDangKyHocPhan")
-}
 
 model Avatars {
   id        String @id @default(uuid())

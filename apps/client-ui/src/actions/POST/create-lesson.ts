@@ -14,7 +14,7 @@ export default async function CreateLesson(Data: any){
 
     const findLessonName = await prisma.tbHocPhan.findFirst({
         where: {
-            id: Data.id
+            TenHocPhan: Data.TenHocPhan
         }
     })
 

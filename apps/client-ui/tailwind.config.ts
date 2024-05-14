@@ -18,6 +18,10 @@ const config: Config = {
         Poppins: ["var(--font-Poppins)"],
         Inter: ["var(--font-inter)"],
       },
+
+      colors: {
+        'model-black': '#18181b',
+      },
     },
   },
   darkMode: "class",

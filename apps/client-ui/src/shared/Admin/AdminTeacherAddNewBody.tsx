@@ -42,7 +42,7 @@ const AdminTeacherAddNewBody = () => {
 
   return (
     <>
-    <div className='w-full h-full flex flex-col'>
+    <div className='w-full h-full flex flex-col overflow-y-auto'>
 
         {/* Top body */}
         <div className='basis-1/5'>

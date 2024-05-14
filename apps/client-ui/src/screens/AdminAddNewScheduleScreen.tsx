@@ -1,19 +1,17 @@
 'use server'
-import getAllLesson from "@/actions/GET/get-all-lesson";
 import AdminNavItems from "@/components/AdminNavItems";
-import AdminLessonBody from "@/shared/Admin/AdminLessonBody";
+import AdminScheduleAddNewBody from "@/shared/Admin/AdminScheduleAddNewBody";
 import { cookies } from "next/headers";
 
-export default async function AdminLessonScreen() {
+export default async function AdminAddNewScheduleScreen() {
   const cookieStore = cookies();
   const Admin_id = cookieStore.get("user_id");
-  const dataLessons = await getAllLesson()
   return (
     <>
       <div className="w-full h-screen overflow-hidden bg-slate-200 flex">
         {/* <Dashboard /> */}
         <AdminNavItems />
-        <AdminLessonBody dataLessons={dataLessons} />
+        <AdminScheduleAddNewBody />
       </div>
     </>
   );

@@ -10,7 +10,7 @@ export default async function AdminTeacherScreen() {
   const dataTeacher = await getAllTeacher()
   return (
     <>
-      <div className="w-full h-screen bg-slate-200 flex">
+      <div className="w-full h-screen overflow-hidden bg-slate-200 flex">
         {/* <Dashboard /> */}
         <AdminNavItems />
         <AdminTeacherBody dataTeacher={dataTeacher} />

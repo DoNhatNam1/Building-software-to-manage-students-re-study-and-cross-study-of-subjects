@@ -8,7 +8,7 @@ export default async function AdminAddNewLessonScreen() {
   const Admin_id = cookieStore.get("user_id");
   return (
     <>
-      <div className="w-full h-screen bg-slate-200 flex">
+      <div className="w-full h-screen overflow-hidden bg-slate-200 flex">
         {/* <Dashboard /> */}
         <AdminNavItems />
         <AdminLessonAddNewBody />
